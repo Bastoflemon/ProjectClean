@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/Window">
+        <file>Images/err.ico</file>
+        <file>Images/right.ico</file>
+        <file>Images/optionSet.png</file>
+        <file>Images/Delete.png</file>
+        <file>Images/Remove.png</file>
+        <file>Images/Add.png</file>
+        <file>Images/OpenDir.png</file>
+        <file>Images/RemoveDir.png</file>
+        <file>Images/Refresh.png</file>
+        <file>Images/Save.png</file>
+        <file>Images/CleanDir.png</file>
+        <file>Images/Scan.png</file>
+        <file>Images/StopScan.png</file>
+        <file>Images/DeleteFile.png</file>
+        <file>Images/StopDeleteFile.png</file>
+        <file>Images/query.png</file>
+        <file>Images/Chinese.png</file>
+        <file>Images/English.png</file>
+        <file>Images/Project.png</file>
+        <file>Images/help.png</file>
+    </qresource>
+</RCC>
