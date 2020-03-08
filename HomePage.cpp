@@ -64,13 +64,19 @@ void HomePage::init()
 	ui->cleanWait->setColumnWidth(TreeColNum::colItemType, 25);
 
 	// 初始化目录
-	QString imagesPath = QApplication::applicationDirPath() + "/Images";
-	QDir dir(imagesPath);
-	if (!dir.exists())
+    QString Path = QApplication::applicationDirPath();
+    QString imagesPath = Path + "/Images";
+    QDir imagesDir(imagesPath);
+    if (!imagesDir.exists())
 	{
-		dir.mkdir(imagesPath);
+        imagesDir.mkdir(imagesPath);
 	}
-
+    QString languagePath = Path + "/Language";
+    QDir languageDir(languagePath);
+    if (!languageDir.exists())
+    {
+        languageDir.mkdir(languagePath);
+    }
 	setCentralWidget(ui->splitterMain);
 }
 

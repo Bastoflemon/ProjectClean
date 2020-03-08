@@ -48,7 +48,7 @@ void OptionEdit::on_btnCheck_clicked()
 			ui->btnCheck->setIcon(QIcon(":/Window/Images/right.ico"));
 			ui->btnCheck->setStyleSheet("color: green");
 		}
-		QTimer::singleShot(1000, this, SLOT(restore_Check_button_style()));
+		QTimer::singleShot(5000, this, SLOT(restore_Check_button_style()));
 	}
 	else
 		QMessageBox::warning(this, tr("警告"), tr("不能为空字符串"));

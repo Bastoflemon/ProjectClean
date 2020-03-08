@@ -64,6 +64,12 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>btnOK</tabstop>
+  <tabstop>btnCancel</tabstop>
+  <tabstop>btnCheck</tabstop>
+  <tabstop>lineEdit</tabstop>
+ </tabstops>
  <resources>
   <include location="res.qrc"/>
  </resources>

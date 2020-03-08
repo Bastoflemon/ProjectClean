@@ -233,8 +233,16 @@ void CleanRuleSet::button_response(int id)
 					}
 				}
 				m_optionListModel->removeRow(index.row());
-				QModelIndex index = m_optionListModel->index(m_optionListModel->rowCount() - 1, 0);
-				ui->vSetOption->setCurrentIndex(index);
+				if (m_optionListModel->rowCount() == 0)
+				{
+					m_fileListModel->removeRows(0, m_fileListModel->rowCount());
+					m_suffixListModel->removeRows(0, m_suffixListModel->rowCount());
+				}
+				else
+				{
+					QModelIndex index = m_optionListModel->index(m_optionListModel->rowCount() - 1, 0);
+					ui->vSetOption->setCurrentIndex(index);
+				}
 			}
 			break;
 		}
@@ -465,13 +473,14 @@ void CleanRuleSet::on_btnSave_clicked()
 	// TODO 保存按钮
 	QModelIndex index = ui->vSetOption->currentIndex();
 	save_previous_content(index);
-	for (int i = 0; i < m_cleanOptionInfo.count(); i++)
+	g_cleanOptionInfo = m_cleanOptionInfo;
+
+	for (int i = 0; i < g_cleanOptionInfo.count(); i++)
 	{
-		if (m_cleanOptionInfo[i].labSuffix.isEmpty() && m_cleanOptionInfo[i].labFile.isEmpty())
+		if (g_cleanOptionInfo[i].labSuffix.isEmpty() && g_cleanOptionInfo[i].labFile.isEmpty())
 		{
-			m_cleanOptionInfo.removeAt(i);
+			g_cleanOptionInfo.removeAt(i);
 		}
 	}
-	g_cleanOptionInfo = m_cleanOptionInfo;
 	emit save();
 }

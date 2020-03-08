@@ -21,12 +21,12 @@ private slots:
 	void on_btnCheck_clicked();
 
 	void on_btnOK_clicked();
+	void restore_Check_button_style();
 
 private:
 	QStringList m_optionList;
 	bool b_repeat;
 	int m_i_row;
-	void restore_Check_button_style();
 signals:
 	void option_text(QString text, int row);
 private:

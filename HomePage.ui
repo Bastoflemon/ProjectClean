@@ -484,7 +484,7 @@
      <normaloff>:/Window/Images/optionSet.png</normaloff>:/Window/Images/optionSet.png</iconset>
    </property>
    <property name="text">
-    <string>编辑</string>
+    <string>编辑配置文件</string>
    </property>
    <property name="toolTip">
     <string>编辑配置文件</string>
