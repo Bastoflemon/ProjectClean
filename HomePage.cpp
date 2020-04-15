@@ -596,7 +596,7 @@ void HomePage::deleteChildItem(QTreeWidgetItem *superItem)
  */
 QString HomePage::getLastError(DWORD errorCode)
 {
-	// TODO Windows错误信息转文职
+	// TODO Windows错误信息转文本
 	TCHAR *text = nullptr;
 	FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM |
 				  FORMAT_MESSAGE_IGNORE_INSERTS, NULL, errorCode,
